@@ -86,6 +86,7 @@ abstract class exampleAbstract { ... }
 
 // INTERFACE with CLASS
 // Keyword: 'implements'
+// class BigPizza extends Sizes implements PizzaInterface { ... }
 interface PizzaInterace {
   readonly name: string;
   private toppings: string[];
@@ -93,3 +94,13 @@ interface PizzaInterace {
   removeTopping(): void;
 }
 
+// STATIC methods and properties
+class Coupon {
+  static allowed = ['pizza', 'calzone'];
+  static create(percent: number): string {
+    return `Coupon_${percent}`;
+  }
+}
+
+// static methods and properties can be accessed WITHOUT creating and instance of 
+Coupon.create(25);
